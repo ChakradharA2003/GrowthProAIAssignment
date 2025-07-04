@@ -6,7 +6,7 @@ const app = express();
 const PORT = 4000;
 
 app.use(cors({
-  origin: 'https://growth-pro-ai-assignment.vercel.app/', // Update with your client URL
+  origin: 'https://growth-pro-ai-assignment.vercel.app', 
   methods: ['GET', 'POST'],
   credentials: true,
 }));
