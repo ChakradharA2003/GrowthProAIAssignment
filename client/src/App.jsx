@@ -27,7 +27,7 @@ function App() {
         setError('');
         setLoading(true);
         try {
-          const res = await axios.post('http://localhost:4000/api/business-data', {
+          const res = await axios.post('https://growthproaiassignment.onrender.com/api/business-data', {
             name,
             location,
           });
@@ -40,7 +40,7 @@ function App() {
 
       const handleRegenerate = async () => {
         try {
-          const res = await axios.get(`http://localhost:4000/api/regenerate-headline`, {
+          const res = await axios.get(`https://growthproaiassignment.onrender.com/api/regenerate-headline`, {
             params: { name, location },
           });
           setBusinessData((prev) => ({ ...prev, headline: res.data.headline }));
