@@ -44,6 +44,9 @@ function App() {
             params: { name, location },
           });
           setBusinessData((prev) => ({ ...prev, headline: res.data.headline }));
+          setName('');
+          setLocation('');
+          setError('');
         } catch (err) {
           setError('Unable to regenerate headline');
         }
