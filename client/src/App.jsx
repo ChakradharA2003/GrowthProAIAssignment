@@ -32,6 +32,8 @@ function App() {
             location,
           });
           setBusinessData(res.data);
+          setName('');
+          setLocation('');
         } catch (err) {
           setError('Something went wrong');
         }
@@ -58,7 +60,7 @@ function App() {
               Local Business SEO Dashboard
             </h1>
 
-            <div className="space-y-4">
+            <form onSubmit={handleSubmit} className="space-y-4">
               <input
                 type="text"
                 placeholder="Business Name"
@@ -75,13 +77,12 @@ function App() {
               />
               {error && <p className="text-red-500 text-sm font-medium bg-red-100/80 rounded-lg p-2 text-center animate-fade-in">{error}</p>}
               <button
-                type="button"
-                onClick={handleSubmit}
+                type="submit"
                 className="w-full bg-green-500 cursor-pointer text-white py-2 rounded-lg hover:bg-green-600 transition-all duration-300 shadow-md hover:shadow-lg animate-pulse-slow"
               >
                 {loading ? 'Loading...' : 'Submit'}
               </button>
-            </div>
+            </form>
 
             {businessData && (
               <div className="p-4 mt-4 border border-green-200 rounded-xl shadow-md bg-green-50/80 space-y-3 transition-all duration-300 hover:shadow-lg animate-fade-in">
