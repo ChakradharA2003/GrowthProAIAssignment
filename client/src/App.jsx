@@ -148,14 +148,31 @@ function App() {
     <>
       <Header />
       <div className="min-h-screen w-full bg-gradient-to-b from-green-50 to-white flex items-center justify-center px-4 py-8">
-        <div className="w-full max-w-2xl bg-white/90 backdrop-blur-sm shadow-lg rounded-2xl p-6 space-y-6 transition-all duration-300 hover:shadow-xl">
-          <h1 className="text-4xl font-bold text-center text-green-700 mb-4 animate-fade-in md:text-2xl text-lg">
-            Local Business SEO Dashboard
-          </h1>
-          {renderForm()}
-          {renderView()}
-        </div>
-      </div>
+  <div className="w-full max-w-2xl bg-white/90 backdrop-blur-sm shadow-lg rounded-2xl p-6 space-y-6 transition-all duration-300 hover:shadow-xl relative">
+    
+    
+    <button
+      onClick={() => {
+        setName('');
+        setLocation('');
+        setBusinessData(null);
+        setError('');
+        setApiStatus(apiStates.initial);
+      }}
+      className="absolute cursor-pointer top-4 right-4 text-green-700 hover:text-green-900 bg-transparent text-sm md:text-base font-semibold px-3 py-1 rounded transition-all duration-200"
+    >
+      Clear
+    </button>
+
+    <h1 className="text-4xl font-bold text-left text-green-700 mb-4 animate-fade-in md:text-2xl text-lg">
+      Local Business SEO Dashboard
+    </h1>
+
+    {renderForm()}
+    {renderView()}
+  </div>
+</div>
+
     </>
   )
 }
