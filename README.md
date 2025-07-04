@@ -20,7 +20,7 @@ To build a **responsive dashboard** where users can:
 
 ## 🖼️ Demo
 
-> 🌍 Live Preview: [https://growth-pro-ai-assignment.vercel.app](https://growth-pro-ai-assignment.vercel.app)  
+> 🌍 Live Preview: ([https://growth-pro-ai-assignment.vercel.app](https://growth-pro-ai-assignment.vercel.app/))  
 
 ---
 
