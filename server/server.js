@@ -5,7 +5,11 @@ const businessRoutes = require('./routes/businessRoutes');
 const app = express();
 const PORT = 4000;
 
-app.use(cors());
+app.use(cors({
+  origin: 'https://growth-pro-ai-assignment.vercel.app/', // Update with your client URL
+  methods: ['GET', 'POST'],
+  credentials: true,
+}));
 app.use(express.json());
 app.use('/api', businessRoutes);
 
