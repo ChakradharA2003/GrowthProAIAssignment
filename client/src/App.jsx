@@ -32,8 +32,6 @@ function App() {
             location,
           });
           setBusinessData(res.data);
-          setName('');
-          setLocation('');
         } catch (err) {
           setError('Something went wrong');
         }
