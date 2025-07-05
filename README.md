@@ -79,7 +79,6 @@ GrowthProAiAssignment/
 
 ```bash
 git clone https://github.com/your-username/GrowthProAiAssignment.git
-cd GrowthProAiAssignment
 ```
 ---
 
