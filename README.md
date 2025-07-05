@@ -102,7 +102,7 @@ npm install
 -  #### Start Backend (Port: 4000)
 ```bash
 cd server
-npm start
+node server.js
 ```
 
 - #### Start Frontend (Port: 5173)
